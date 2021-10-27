@@ -565,8 +565,8 @@ async def seven(ctx):
     await ctx.send(embed=embed)
 
 #8 Subcommand
-@board.command(aliases=['7'])
-async def seven(ctx):
+@board.command(aliases=['8'])
+async def eight(ctx):
 
     boardList=["DK's Treetop Temple", "Goomba's Booty Boardwalk", "King Boo's Haunted Hideaway", "Shy Guy's Perplex Express", "Koopa's Tycoon Town", "Bowser's Warped Orbit"]
     board=random.choice(boardList)
@@ -673,4 +673,5 @@ async def superstars(ctx):
     await ctx.send(embed=embed)
 
 #Run Bot
-client.run("NTU2ODQ0MzcwMTU0ODgxMDI0.XI5Xuw.S1wdhXbTTJ1lATrz5y_XKzqMOto")
+TOKEN = os.environ.get("TOKEN")
+client.run(TOKEN)
