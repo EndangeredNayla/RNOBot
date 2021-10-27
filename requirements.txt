@@ -1,0 +1,6 @@
+py-cord
+aiohttp
+python-box
+datetime
+dadjokes
+Flask
