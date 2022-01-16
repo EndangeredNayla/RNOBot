@@ -39,7 +39,6 @@ client = commands.Bot(description="RNO Bot",
                       command_prefix=prefix,
                       intents=intents,
                       activity=discord.Game(name=random.choice(playing)))
-client.remove_command('help')
 
 #Owner ID
 ownerID = 543576276108181506
@@ -103,17 +102,6 @@ async def on_member_join(member):
   await welcomechannel.send(f"{jlrandom}")
   await staffwelcomechannel.send(f"{member} Joined. Account created on {member.created_at}")
 
-#Help Command
-@client.command()
-async def help(ctx):
-  author = ctx.message.author
-  embed = discord.Embed(color = discord.Color.orange())
-
-  embed.set_author(name="Commands:")
-  embed.add_field(name="General", value="!help - Shows This Message\n\n!ping - Says Pong Back To You\n\n!uptime - Bot Uptime Counter", inline=False)
-  embed.add_field(name="Fun", value="!toss - Coin Flip\n\n!Dadjoke - Give a Dad Joke\n\n!dice - Roll 1-6", inline=False)
-
-  await ctx.send(author, embed=embed)
 
 #NES Command
 @client.command()
